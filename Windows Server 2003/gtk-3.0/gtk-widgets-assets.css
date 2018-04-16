@@ -1,9 +1,10 @@
-/*********************************
- * check and radio (gnome 3.18+) *
- *********************************/
+/*******************
+ * check and radio *
+ *******************/
 check,
 check row:selected,
 check row:selected:focus {
+    padding: 4px;
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png"));
 }
 
@@ -41,6 +42,7 @@ check row:selected:focus:indeterminate:disabled {
 radio,
 radio row:selected,
 radio row:selected:focus {
+    padding: 4px;
     -gtk-icon-source: url("assets/radio-unselected.png");
 }
 
@@ -114,48 +116,3 @@ menuitem radio:hover {
 menuitem radio:disabled {
 	color: @insensitive_fg_color; 
 }
-
-/*********************
- * GtkScale's slider *
- *********************/
-.scale.slider.horizontal,
-.scale.scale-has-marks-above.slider,
-.scale.scale-has-marks-below.slider,
-.scale.scale-has-marks-above.slider.horizontal,
-.scale.scale-has-marks-below.slider.horizontal {
-	background-image: url("assets/slider-horiz.png");
-}
-
-.scale.slider.horizontal:hover,
-.scale.scale-has-marks-above.slider:hover,
-.scale.scale-has-marks-below.slider:hover,
-.scale.scale-has-marks-above.slider.horizontal:hover,
-.scale.scale-has-marks-below.slider.horizontal:hover {
-	background-image: url("assets/slider-horiz-over.png");
-}
-
-.scale.slider.horizontal:disabled,
-.scale.scale-has-marks-above.slider:disabled,
-.scale.scale-has-marks-below.slider:disabled,
-.scale.scale-has-marks-above.slider.horizontal:disabled,
-.scale.scale-has-marks-below.slider.horizontal:disabled {
-	background-image: url("assets/slider-horiz-insensitive.png");
-}
-
-.scale.slider.vertical,
-.scale.scale-has-marks-above.slider.vertical,
-.scale.scale-has-marks-below.slider.vertical {
-	background-image: url("assets/slider-vert.png");
-}
-
-.scale.slider.vertical:hover,
-.scale.slider.vertical:active,
-.scale.slider.vertical:active:hover {
-	background-image: url("assets/slider-vert-over.png");
-}
-
-.scale.slider.vertical:disabled,
-.scale.slider.vertical:disabled:hover {
-	background-image: url("assets/slider-vert-insensitive.png");
-}
-
