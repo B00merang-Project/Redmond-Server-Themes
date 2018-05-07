@@ -1,76 +1,201 @@
+/*******************
+ * check and radio *
+ *******************/
+/* draw regular check and radio items using our assets */
+.check,
+.check row:selected,
+.check row:selected:focus {
+    background-image: url("assets/checkbox-unchecked.png");
+}
+
+.check:insensitive,
+.check row:selected:insensitive,
+.check row:selected:focus:insensitive {
+    background-image: url("assets/checkbox-unchecked-insensitive.png");
+}
+
+.check:hover,
+.check row:selected:hover,
+.check row:selected:focus:hover {
+    background-image: url("assets/checkbox-unchecked.png");
+}
+
+.check:active,
+.check row:selected:active,
+.check row:selected:focus:active {
+    background-image: url("assets/checkbox-checked.png");
+}
+
+.check:active:hover,
+.check row:selected:active:hover,
+.check row:selected:focus:active:hover {
+    background-image: url("assets/checkbox-checked.png");
+}
+
+.check:active:insensitive,
+.check row:selected:active:insensitive,
+.check row:selected:focus:active:insensitive {
+    background-image: url("assets/checkbox-checked-insensitive.png");
+}
+
+.check:inconsistent,
+.check row:selected:inconsistent,
+.check row:selected:focus:inconsistent {
+    background-image: url("assets/checkbox-mixed.png");
+}
+
+.check:inconsistent:insensitive,
+.check row:selected:inconsistent:insensitive,
+.check row:selected:focus:inconsistent:insensitive {
+    background-image: url("assets/checkbox-mixed-insensitive.png");
+}
+
+
+.radio,
+.view.cell.radio {
+    background-image: url("assets/radio-unselected.png");
+}
+
+.radio:insensitive {
+    background-image: url("assets/radio-unselected-insensitive.png");
+}
+
+.radio:hover {
+    background-image: url("assets/radio-unselected.png");
+}
+
+.radio:active {
+    background-image: url("assets/radio-selected.png");
+}
+
+.radio:active:hover {
+    background-image: url("assets/radio-selected.png");
+}
+
+.radio:active:insensitive {
+    background-image: url("assets/radio-selected-insensitive.png");
+}
+
+.radio:inconsistent {
+    background-image: url("assets/radio-mixed.png");
+}
+
+.radio:inconsistent:insensitive {
+    background-image: url("assets/radio-mixed-insensitive.png");
+}
+
+/********************************
+ * Touch text selection handles *
+ ********************************/
+.cursor-handle.bottom {
+	background-image: url("assets/slider-horiz.png");
+}
+
+.cursor-handle.top {
+	background-image: url("assets/slider-horiz.png");
+}
+
+/* menuitem */
+
+.menuitem.check:active {
+    background-image: url("assets/menuitem-checkbox-checked.png");
+}
+
+.menuitem.check:active:insensitive {
+    background-image: url("assets/menuitem-checkbox-checked-insensitive.png");
+}
+
+.menuitem.check:inconsistent,
+.menuitem.radio:inconsistent {
+    background-image: url("assets/menuitem-checkbox-mixed.png");
+}
+
+.menuitem.check:inconsistent:insensitive,
+.menuitem.radio:inconsistent:insensitive {
+    background-image: url("assets/menuitem-checkbox-mixed-insensitive.png");
+}
+
+.menuitem.radio:active {
+    background-image: url("assets/menuitem-radio-checked.png");
+}
+
+.menuitem.radio:active:insensitive {
+    background-image: url("assets/menuitem-radio-checked-insensitive.png");
+}
+
 /*********************************
  * check and radio (gnome 3.18+) *
  *********************************/
-check,
-check row:selected,
-check row:selected:focus {
+.check,
+.check row:selected,
+.check row:selected:focus {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"), url("assets/checkbox-unchecked@2.png"));
 }
 
-check:disabled,
-check row:selected:disabled,
-check row:selected:focus:disabled {
+.check:insensitive,
+.check row:selected:insensitive,
+.check row:selected:focus:insensitive {
     -gtk-icon-source: url("assets/checkbox-unchecked-insensitive.png");
 }
 
-check:active, check:checked,
-check row:selected:active, check row:selected:checked,
-check row:selected:focus:active, check row:selected:focus:checked {
+.check:active, .check:checked,
+.check row:selected:active, .check row:selected:checked,
+.check row:selected:focus:active, .check row:selected:focus:checked {
     -gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"), url("assets/checkbox-checked@2.png"));
 }
 
-check:active:disabled, check:checked:disabled,
-check row:selected:active:disabled, check row:selected:checked:disabled,
-check row:selected:focus:active:disabled, check row:selected:focus:checked:disabled {
+.check:active:insensitive, .check:checked:insensitive,
+.check row:selected:active:insensitive, .check row:selected:checked:insensitive,
+.check row:selected:focus:active:insensitive, .check row:selected:focus:checked:insensitive {
     -gtk-icon-source: url("assets/checkbox-checked-insensitive.png");
 }
 
 
-check:indeterminate,
-check row:selected:indeterminate,
-check row:selected:focus:indeterminate {
+.check:inconsistent,
+.check row:selected:inconsistent,
+.check row:selected:focus:inconsistent {
     -gtk-icon-source: url("assets/checkbox-mixed.png");
 }
 
-check:indeterminate:disabled,
-check row:selected:indeterminate:disabled,
-check row:selected:focus:indeterminate:disabled {
+.check:inconsistent:insensitive,
+.check row:selected:inconsistent:insensitive,
+.check row:selected:focus:inconsistent:insensitive {
     -gtk-icon-source: url("assets/checkbox-mixed-insensitive.png");
 }
 
-radio,
-radio row:selected,
-radio row:selected:focus {
+.radio,
+.radio row:selected,
+.radio row:selected:focus {
     -gtk-icon-source: url("assets/radio-unselected.png");
 }
 
-radio:disabled,
-radio row:selected:disabled,
-radio row:selected:focus:disabled {
+.radio:insensitive,
+.radio row:selected:insensitive,
+.radio row:selected:focus:insensitive {
     -gtk-icon-source: url("assets/radio-unselected-insensitive.png");
 }
 
-radio:active, radio:checked,
-radio row:selected:active, radio row:selected:checked,
-radio row:selected:focus:active, radio row:selected:focus:checked {
+.radio:active, .radio:checked,
+.radio row:selected:active, .radio row:selected:checked,
+.radio row:selected:focus:active, .radio row:selected:focus:checked {
     -gtk-icon-source: url("assets/radio-selected.png");
 }
 
-radio:active:disabled, radio:checked:disabled,
-radio row:selected:active:disabled, radio row:selected:checked:disabled,
-radio row:selected:focus:active:disabled, radio row:selected:focus:checked:disabled {
+.radio:active:insensitive, .radio:checked:insensitive,
+.radio row:selected:active:insensitive, .radio row:selected:checked:insensitive,
+.radio row:selected:focus:active:insensitive, .radio row:selected:focus:checked:insensitive {
     -gtk-icon-source: url("assets/radio-selected-insensitive.png");
 }
 
-radio:indeterminate,
-radio row:selected:indeterminate,
-radio row:selected:focus:indeterminate {
+.radio:inconsistent,
+.radio row:selected:inconsistent,
+.radio row:selected:focus:inconsistent {
     -gtk-icon-source: url("assets/radio-mixed.png");
 }
 
-radio:indeterminate:disabled,
-radio row:selected:indeterminate:disabled,
-radio row:selected:focus:indeterminate:disabled {
+.radio:inconsistent:insensitive,
+.radio row:selected:inconsistent:insensitive,
+.radio row:selected:focus:inconsistent:insensitive {
     -gtk-icon-source: url("assets/radio-mixed-insensitive.png");
 }
 
@@ -78,40 +203,40 @@ radio row:selected:focus:indeterminate:disabled {
  * menuitem check & radio *
  **************************/
 
-menuitem check {
+.menuitem.check {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-unchecked.png"));
 	color: @theme_fg_color;
-	-gtk-icon-shadow: none; 
+	icon-shadow: none; 
 }
-menuitem check:active, menuitem check:checked {
+.menuitem.check:active, .menuitem.check:checked {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-checked.png"));
 }
-menuitem check:indeterminate {
+.menuitem.check:inconsistent {
 	-gtk-icon-source: -gtk-scaled(url("assets/checkbox-mixed.png"));
 }
 
-menuitem check:active:hover {
+.menuitem.check:active:hover {
 	color: @theme_selected_fg_color;
 }
-menuitem check:disabled {
+.menuitem.check:insensitive {
 	color: @insensitive_fg_color; 
 }
 
-menuitem radio {
+.menuitem.radio {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-unselected.png"));
 	color: @theme_fg_color;
-	-gtk-icon-shadow: none; 
+	icon-shadow: none; 
 }
-menuitem radio:active, menuitem radio:checked {
+.menuitem.radio:active, .menuitem.radio:checked {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-selected.png"));
 }
-menuitem radio:indeterminate {
+.menuitem.radio:inconsistent {
 	-gtk-icon-source: -gtk-scaled(url("assets/radio-mixed.png"));
 }
-menuitem radio:hover {
+.menuitem.radio:hover {
 	color: @theme_selected_fg_color;
 }
-menuitem radio:disabled {
+.menuitem.radio:insensitive {
 	color: @insensitive_fg_color; 
 }
 
@@ -123,7 +248,7 @@ menuitem radio:disabled {
 .scale.scale-has-marks-below.slider,
 .scale.scale-has-marks-above.slider.horizontal,
 .scale.scale-has-marks-below.slider.horizontal {
-	background-image: url("assets/slider-horiz.png");
+	background-image: url("./assets/slider-horiz.png");
 }
 
 .scale.slider.horizontal:hover,
@@ -131,15 +256,15 @@ menuitem radio:disabled {
 .scale.scale-has-marks-below.slider:hover,
 .scale.scale-has-marks-above.slider.horizontal:hover,
 .scale.scale-has-marks-below.slider.horizontal:hover {
-	background-image: url("assets/slider-horiz-over.png");
+	background-image: url("./assets/slider-horiz-over.png");
 }
 
-.scale.slider.horizontal:disabled,
-.scale.scale-has-marks-above.slider:disabled,
-.scale.scale-has-marks-below.slider:disabled,
-.scale.scale-has-marks-above.slider.horizontal:disabled,
-.scale.scale-has-marks-below.slider.horizontal:disabled {
-	background-image: url("assets/slider-horiz-insensitive.png");
+.scale.slider.horizontal:insensitive,
+.scale.scale-has-marks-above.slider:insensitive,
+.scale.scale-has-marks-below.slider:insensitive,
+.scale.scale-has-marks-above.slider.horizontal:insensitive,
+.scale.scale-has-marks-below.slider.horizontal:insensitive {
+	background-image: url("./assets/slider-horiz-insensitive.png");
 }
 
 .scale.slider.vertical,
@@ -154,8 +279,8 @@ menuitem radio:disabled {
 	background-image: url("assets/slider-vert-over.png");
 }
 
-.scale.slider.vertical:disabled,
-.scale.slider.vertical:disabled:hover {
+.scale.slider.vertical:insensitive,
+.scale.slider.vertical:insensitive:hover {
 	background-image: url("assets/slider-vert-insensitive.png");
 }
 

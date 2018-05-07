@@ -588,10 +588,8 @@ StScrollBar {
 	font-size: 90%;
 	color: black;
 	height: 28px;
-	background-color: #d4d0c8;
-	border-image: url('assets/dash.png') 4 4 4 4;
-	box-shadow: inset 0 1px #fff;
-	border-top: 1px solid #d4d0c8;
+	border: 2px solid transparent;
+	border-image: url('assets/dash.png') 2 2 2 2;
 	text-shadow: none;
 	background-gradient-direction: none;
 }
@@ -737,11 +735,11 @@ StScrollBar {
 	color: black;
 	background-color: transparent;
 	width: 32px;
-	border-radius: 4px; }
+	border-radius: 0; }
 	.pager-button:hover, .pager-button:focus {
-		background-color: rgba(160,160,160,0.2); }
+		background-color: #000082; }
 	.pager-button:active {
-		background-color: rgba(28,122,236,0.5); }
+		background-color: #000082; }
 
 .calendar-change-month-back {
 	background-image: url("assets/calendar-arrow-left.svg"); }
@@ -763,10 +761,10 @@ StScrollBar {
 	border-radius: 1.4em;
 	border: none; }
 	.calendar-day-base:hover, .calendar-day-base:focus {
-		background-color: rgba(160,160,160,0.5); }
+		background-color: #000082; }
 	.calendar-day-base:active {
 		color: white;
-		background-color:rgba(28,122,236,0.6);
+		background-color: #000082;
 		border-color: transparent; }
 	.calendar-day-base.calendar-day-heading {
 		color: black;
@@ -787,7 +785,8 @@ StScrollBar {
 .calendar-nonwork-day {
 	color: rgba(0,0,0,0.5); }
 
-.calendar-today {
+.calendar-today,
+.calendar-day-base:selected {
 	background-image: none;
 	text-shadow:none;
 	color: white;
@@ -1257,7 +1256,7 @@ StScrollBar {
 	width: 6px;
 	height: 6px;
 	border-radius: 3px;
-	background-color: rgba(40,40,40,0.8);
+	background-color: #4c4c4c;
 	margin-bottom: 0px;
 	margin-top: 6px;
 }
